@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmName: mahaPool
+Name: mahaPool
 
 steps:
 - task: NodeTool@0
