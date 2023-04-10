@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
- Name: mahaPool
+  name: mahaPool
 
 
 steps:
