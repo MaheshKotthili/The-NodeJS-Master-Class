@@ -9,6 +9,16 @@ trigger:
 pool:
  Name: mahaPool
 
+- task: CopyPublishBuildArtifacts@1
+  inputs:
+    ArtifactName: '$(Build.ArtifactStagingDirectory)'
+  
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
 steps:
 - task: NodeTool@0
   inputs:
